@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: Windows-latest
     env:
       TZ: Asia/Shanghai
     steps:
@@ -31,8 +31,5 @@ jobs:
     - name: Run weather Report
       run: |
         python weather_report.py
-      env:
-        APP_ID: ${{ secrets.APP_ID }}
-        APP_SECRET: ${{ secrets.APP_SECRET }}
-        OPEN_ID: ${{ secrets.OPEN_ID }}
-        TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+
+     
